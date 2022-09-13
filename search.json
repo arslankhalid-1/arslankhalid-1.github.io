@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Arslan’s Website",
+    "section": "",
+    "text": "THis my new websie"
+  },
+  {
+    "objectID": "assign01.html",
+    "href": "assign01.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Using “Fall.R” to Generate Art\nHere are a few examples of generative art that were created using “Fall.R”. I tried different colors:\n\n\n\nColor: “coral2”\n\n\n\n\n\nColor: “goldenrod1”\n\n\n\n\n\nColor: “darkseagreen4”\n\n\n\n\nAnalysis of Graph\nThe following graph was taken from the article “Risk of COVID-19 Exposure Still a Concern for U.S. Employees”. The graph is too cluttered and tries to show a lot of information at once. It would be useful to break up the single graphic into multiple. Additionally, some other categories may also be useful to explore; for example: instead of having categories like “men” and “democrats” - it might be useful to look at Democrats who are men versus democrats who are women. The color scheme for the graph could also be more indicative of the information it represents. The employees who are least concerned about COVID-19 are colored in the brightest green. Having a vertical bar graph might also help the viewer distinguish the differences between values better.\n\n\n\nConcern About COVID-19 Exposure at Work, by Employee Demographics"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  }
+]
