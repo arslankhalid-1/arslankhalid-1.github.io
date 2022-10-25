@@ -169,10 +169,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="dropdown-item" href="./assign03.html">
  <span class="dropdown-text">Assignment 3</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="./assign04.html">
- <span class="dropdown-text">Assignment 4</span></a>
-  </li>  
     </ul>
   </li>
 </ul>
@@ -190,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#comparing-regression-models" id="toc-comparing-regression-models" class="nav-link active" data-scroll-target="#comparing-regression-models"><strong>COMPARING REGRESSION MODELS</strong></a></li>
+  <li><a href="#comparing-regression-models" id="toc-comparing-regression-models" class="nav-link active" data-scroll-target="#comparing-regression-models">Comparing Regression Models</a></li>
   </ul>
 </nav>
     </div>
@@ -214,26 +210,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <section id="comparing-regression-models" class="level3">
-<h3 class="anchored" data-anchor-id="comparing-regression-models"><strong>COMPARING REGRESSION MODELS</strong></h3>
-<p>We could begin by simply plotting "x1" against "y1"</p>
+<h3 class="anchored" data-anchor-id="comparing-regression-models">Comparing Regression Models</h3>
+<p>We could begin by simply plotting “x1” against “y1”</p>
 <div class="cell">
-<details>
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(anscombe)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(anscombe<span class="sc">$</span>x1,anscombe<span class="sc">$</span>y1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>Output:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Plot32.jpeg" class="img-fluid figure-img" width="500"></p>
+<p><img src="images/Plot32.jpeg" class="img-fluid figure-img" width="450"></p>
 <p></p><figcaption class="figure-caption">Figure 1: Scatterplot y1 by x1</figcaption><p></p>
 </figure>
 </div>
 <p>We create four model objects by running the following regressions</p>
 <div class="cell">
-<details>
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"modelsummary"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"kableExtra"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gt"</span>)</span>
@@ -257,19 +248,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="st">"lm4"</span> <span class="ot">=</span> lm4)</span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">modelsummary</span>(models)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>This results in the following table:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Table1.png" class="img-fluid figure-img" width="325"></p>
+<p><img src="images/Table1.png" class="img-fluid figure-img"></p>
 <p></p><figcaption class="figure-caption">Table 1: Comparing Regression Output</figcaption><p></p>
 </figure>
 </div>
-<p>We can also visualize the fit of the model by comparing plots below. Using "par(mfrow=c(2, 2))" we can display the plots side by side.</p>
+<p>We can also visualize the fit of the model by comparing plots below. Using “par(mfrow=c(2, 2))” we can display the plots side by side.</p>
 <div class="cell">
-<details>
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(anscombe<span class="sc">$</span>x1,anscombe<span class="sc">$</span>y1)</span>
@@ -280,19 +268,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">coefficients</span>(lm3))</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(anscombe<span class="sc">$</span>x4,anscombe<span class="sc">$</span>y4)</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">coefficients</span>(lm4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>Output:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Plot31.jpeg" class="img-fluid figure-img" width="600"></p>
+<p><img src="images/Plot31.jpeg" class="img-fluid figure-img" width="658"></p>
 <p></p><figcaption class="figure-caption">Figure 2: Comparing Plots</figcaption><p></p>
 </figure>
 </div>
 <p>Generating a fancier version using for loops:</p>
 <div class="cell">
-<details>
-<summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ff <span class="ot">&lt;-</span> y <span class="sc">~</span> x</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mods <span class="ot">&lt;-</span> <span class="fu">setNames</span>(<span class="fu">as.list</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>), <span class="fu">paste0</span>(<span class="st">"lm"</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -320,13 +305,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">mtext</span>(<span class="st">"Anscombe's 4 Regression data sets"</span>, <span class="at">outer =</span> <span class="cn">TRUE</span>, <span class="at">cex =</span> <span class="fl">1.5</span>)</span>
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(op)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 </div>
 <p>Output:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Plot%2033.jpeg" class="img-fluid figure-img" width="600"></p>
-<p></p><figcaption class="figure-caption">Figure 3: Anscombe's 4 Regression Datasets</figcaption><p></p>
+<p><img src="images/Plot%2033.jpeg" class="img-fluid figure-img" width="658"></p>
+<p></p><figcaption class="figure-caption">Figure 3: Anscombe’s 4 Regression Datasets</figcaption><p></p>
 </figure>
 </div>
 
